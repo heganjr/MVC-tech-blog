@@ -47,4 +47,10 @@ sequelize.sync({ force: false }).then(() => {
 // profile - see all my own posts, edit and delete my own stuff
 //  handlebars - built-in helper #loggedIn (RecSession) - Express-session (cookies)
 // connection to database - SQL - Sequelize
-// db folder to set up database - schema.sql
+// db folder to set up database - schema.sql DONE
+// utils folder - auth.js and helpers.js
+
+// Home should see all the posts - if logged in - Can comment on posts
+// Profile(Dashboard) - Can see all my own posts and can edit/ delete those posts
+// Logout - deletes the session
+// If I am 
