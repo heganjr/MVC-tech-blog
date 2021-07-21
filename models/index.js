@@ -25,12 +25,13 @@ Comment.belongsTo(User, {
 Post.belongsTo(User, {
   foreignKey: "user_id",
 });
+// Post belong to User
 
 Post.hasMany(Comment, {
   foreignKey: "post_id",
   onDelete: "CASCADE",
 });
 
-module.exports = { User, Post };
+module.exports = { User, Post, Comment};
 
 // A comment has to belong to a post - that comment which belongs to a post - also belongs to a user

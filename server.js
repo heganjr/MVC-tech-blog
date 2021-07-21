@@ -34,7 +34,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(routes);
+// app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
@@ -48,9 +48,20 @@ sequelize.sync({ force: false }).then(() => {
 //  handlebars - built-in helper #loggedIn (RecSession) - Express-session (cookies)
 // connection to database - SQL - Sequelize
 // db folder to set up database - schema.sql DONE
-// utils folder - auth.js and helpers.js
+// utils folder - auth.js and helpers.js - Done
 
 // Home should see all the posts - if logged in - Can comment on posts
 // Profile(Dashboard) - Can see all my own posts and can edit/ delete those posts
 // Logout - deletes the session
-// If I am 
+// SQL - sequelize (MODELS)
+// - index.js
+// =
+
+// queries in controller
+// posts and comments models. DONE
+
+// ROUTES
+// HOME - WHAT THE USER SEES
+// PROFILE - WHAT THE USER SEES
+
+// Server for Handle bars and helpers
