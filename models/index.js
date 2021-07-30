@@ -32,6 +32,8 @@ Post.hasMany(Comment, {
   onDelete: "CASCADE",
 });
 
-module.exports = { User, Post, Comment};
+module.exports = { User, Post, Comment };
 
 // A comment has to belong to a post - that comment which belongs to a post - also belongs to a user
+
+// Export all the models together and export from the index.js so you can export with the associations attached to the models

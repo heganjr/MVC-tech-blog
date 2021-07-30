@@ -1,8 +1,9 @@
-const sequelize = require('../config/connection');
-const { User, Post } = require('../models');
+const sequelize = require("../config/connection");
+const { User, Post, Comment } = require("../models");
 
-const userData = require('./userData.json');
-const postData = require('./postData.json');
+const userData = require("./userData.json");
+const postData = require("./postData.json");
+const commentData = require("./commentData.json");
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -15,7 +16,16 @@ const seedDatabase = async () => {
   for (const post of postData) {
     await Post.create({
       ...post,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
+      // spread operator
+      // user_id: users[Math.floor(Math.random() * users.length)].id,
+      // above code randomises the user id and then sets the value of user_id to the randomisation,
+    });
+  }
+
+  for (const comment of commentData) {
+    await Comment.create({
+      ...comment,
+      // spread operator - READ UP ON THIS - Spreads the keys out according the ley names in the JSON and pushes to the SQL DB
     });
   }
 

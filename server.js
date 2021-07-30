@@ -65,3 +65,5 @@ sequelize.sync({ force: false }).then(() => {
 // PROFILE - WHAT THE USER SEES
 
 // Server for Handle bars and helpers
+
+// LOOK AT THE FRONT END SINGLE POST FOR HANDLEBARS!

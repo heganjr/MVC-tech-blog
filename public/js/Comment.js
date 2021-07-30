@@ -7,9 +7,10 @@ const newFormHandler = async (event) => {
     .querySelector("#project-funding")
     .value.trim();
   const description = document.querySelector("#project-desc").value.trim();
+//   I ONLY NEED THE COMMENT DECSCRIPTION
 
-  if (name && needed_funding && description) {
-    const response = await fetch(`/api/post`, {
+  if (description) {
+    const response = await fetch(`/api/comment`, {
       method: "POST",
       body: JSON.stringify({ name, needed_funding, description }),
       headers: {
