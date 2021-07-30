@@ -17,6 +17,8 @@ router.get("/", async (req, res) => {
     // Serialize data so the template can read it
     const posts = postData.map((project) => project.get({ plain: true }));
 
+    // maps all of the data from Post database and it includes User and removes meta data - plain: true
+
     // Projects = posts, comments
 
     // Pass serialized data and session flag into template
@@ -54,10 +56,10 @@ router.get("/post/:id", async (req, res) => {
   }
 });
 
-// Use withAuth middleware to prevent access to route
-// Profile page, cant get here UNLESS you are logged in
 router.get("/profile", withAuth, async (req, res) => {
   // withAuth - this function (Found in utils) - redirects user to login if a cookie session when logged_in is not true
+  console.log("GET ROUTE");
+  console.log(req.session.user_id)
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -66,6 +68,7 @@ router.get("/profile", withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
+    console.log(user);
 
     res.render("profile", {
       ...user,
