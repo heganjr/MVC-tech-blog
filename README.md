@@ -99,13 +99,13 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 ### Screenshot
 
-![homePage.PNG](./assets/homePage.PNG)
+![homePage.PNG](./Assets/homePage.PNG)
 
-![login.PNG](./assets/login.PNG)
+![login.PNG](./Assets/login.PNG)
 
-![profilePage.PNG](./assets/profilePage.PNG)
+![profilePage.PNG](./Assets/profilePage.PNG)
 
-![singlePostView.PNG](./assets/singlePostView.PNG)
+![singlePostView.PNG](./Assets/singlePostView.PNG)
 
 ## How to Contribute
 
